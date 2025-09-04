@@ -35,7 +35,7 @@ class AutoresView(ListCreateAPIView):
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, SearchFilter]
     filterset_fields = ['id']   # Permite o filtro exato
-    search_filter = ['autor']   # Habilita a busca total de strings
+    search_fields = ['autor']   # Habilita a busca total de strings
     
 class AutoresDetailView(RetrieveUpdateDestroyAPIView): #UPDATE e DELETE
     queryset = Autor.objects.all()
